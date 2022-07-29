@@ -1,3 +1,5 @@
+#ifndef SORT_UTILS_HPP
+#define SORT_UTILS_HPP
 
 namespace sort{
 	float* createArray(int n);
@@ -9,3 +11,5 @@ namespace sort{
 	void swap(float* A, int i, int j);
 	int getRandomInt(int min, int max);
 }
+
+#endif
