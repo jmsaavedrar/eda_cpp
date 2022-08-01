@@ -13,7 +13,7 @@ long getElapsedTime(std::chrono::time_point<std::chrono::high_resolution_clock> 
 int main(int nargs, char** args){
 
 	std::srand(std::time(nullptr));
-	int n = 10000;
+	int n = 100000;
 	float* A = sort::createRandomIntArray(n, 0, 100);
 	auto start = std::chrono::high_resolution_clock::now();
 	sort::quickSort(A, n);
