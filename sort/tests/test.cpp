@@ -16,12 +16,10 @@ int main(int nargs, char** args){
 	int n = 10000;
 	float* A = sort::createRandomIntArray(n, 0, 100);
 	auto start = std::chrono::high_resolution_clock::now();
-	sort::selectionSort(A, n);
 	sort::quickSort(A, n);
 	//sort::printArray(A, n);
 	sort::deleteArray(A);
 	auto end = std::chrono::high_resolution_clock::now();
-	sort::printArray(A, n);
 	std::cout<<" Elapsed : " << getElapsedTime(start, end) << std::endl;
 	return 0;
 }

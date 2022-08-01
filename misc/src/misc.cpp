@@ -34,7 +34,6 @@ namespace misc{
 		*jmss_out = jmss;
 		*mss_out = mss;
 	}
-
 }
 
 
