@@ -18,7 +18,7 @@ int main(int nargs, char** vargs){
 	int n = 6;
 	misc::printArray(A, n);
 	misc::getMSS(A, n, &i, &j, &mss);
-	std::cout<<" MSS(n3) i: " << i << " j: " << j << " val: "<<mss<<std::endl;
+	std::cout<<" MSS(n2) i: " << i << " j: " << j << " val: "<<mss<<std::endl;
 	misc::getMSS_v2(A, n, &i, &j, &mss);
 	std::cout<<" MSS(n2) i: " << i << " j: " << j << " val: "<<mss<<std::endl;
 	misc::getMSS_v3(A, n, &i, &j, &mss);
