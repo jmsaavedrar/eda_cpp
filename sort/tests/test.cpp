@@ -10,16 +10,44 @@ long getElapsedTime(std::chrono::time_point<std::chrono::high_resolution_clock> 
 	return static_cast<long>(int_ms.count());
 }
 
-int main(int nargs, char** args){
+void testSort(int max_size, int n_sizes){
+	int* sizes = sort::linspace(max_size, n_sizes);
+	float* A = nullptr;
+	int n = 0;
+	for (int i = 0; i < n_sizes; i++){
+		n = sizes[i];
+		A = sort::createRandomIntArray(n, 0, 100);
+		auto start = std::chrono::high_resolution_clock::now();
+		//change the sort method here
+		sort::quickSort(A, n);
+		//
+		auto end = std::chrono::high_resolution_clock::now();
+		long elapsed =  getElapsedTime(start, end);
+		sort::deleteArray(A);
+		std::cout << " [" << n << "," << elapsed << "]" << std::endl;
+	}
+	delete[] sizes;
+}
 
-	std::srand(std::time(nullptr));
-	int n = 100000;
-	float* A = sort::createRandomIntArray(n, 0, 100);
-	auto start = std::chrono::high_resolution_clock::now();
-	sort::quickSort(A, n);
-	//sort::printArray(A, n);
-	sort::deleteArray(A);
-	auto end = std::chrono::high_resolution_clock::now();
-	std::cout<<" Elapsed : " << getElapsedTime(start, end) << std::endl;
+
+int main(int nargs, char** nvargs){
+	int n_sizes = 10;
+	int max_size = 100000;
+	testSort(max_size, n_sizes);
 	return 0;
 }
+
+
+//int main(int nargs, char** args){
+//
+//	std::srand(std::time(nullptr));
+//	int n = 100000;
+//	float* A = sort::createRandomIntArray(n, 0, 100);
+//	auto start = std::chrono::high_resolution_clock::now();
+//	sort::quickSort(A, n);
+//	//sort::printArray(A, n);
+//	sort::deleteArray(A);
+//	auto end = std::chrono::high_resolution_clock::now();
+//	std::cout<<" Elapsed : " << getElapsedTime(start, end) << std::endl;
+//	return 0;
+//}

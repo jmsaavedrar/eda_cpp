@@ -10,6 +10,7 @@ namespace sort{
 	void setAll(float* A, int n, float value);
 	void swap(float* A, int i, int j);
 	int getRandomInt(int min, int max);
+	int* linspace(int max, int n_parts);
 }
 
 #endif

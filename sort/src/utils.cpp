@@ -55,4 +55,13 @@ namespace sort{
 		float a = rand() / static_cast<float>(RAND_MAX);
 		return static_cast<int>(a * (max - min) + min + 0.5);
 	}
+
+	int* linspace(int max, int n_parts){
+		int* V = new int[n_parts];
+		int part_size = max / n_parts;
+		for(int i = 1; i <= n_parts; i++){
+			V[i - 1] = part_size * i;
+		}
+		return V;
+	}
 }
