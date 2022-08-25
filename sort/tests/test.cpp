@@ -30,24 +30,26 @@ void testSort(int max_size, int n_sizes){
 }
 
 
-int main(int nargs, char** nvargs){
-	int n_sizes = 10;
-	int max_size = 100000;
-	testSort(max_size, n_sizes);
-	return 0;
-}
+//int main(int nargs, char** nvargs){
+//	int n_sizes = 10;
+//	int max_size = 100000;
+//	testSort(max_size, n_sizes);
+//	return 0;
+//}
 
 
-//int main(int nargs, char** args){
-//
-//	std::srand(std::time(nullptr));
-//	int n = 100000;
-//	float* A = sort::createRandomIntArray(n, 0, 100);
+int main(int nargs, char** args){
+
+	std::srand(std::time(nullptr));
+	int n = 10;
+	float* A = sort::createRandomIntArray(n, 0, 100);
+	sort::printArray(A, n);
+	std::cout << sort::k_smallest(A, n, 2);
 //	auto start = std::chrono::high_resolution_clock::now();
 //	sort::quickSort(A, n);
-//	//sort::printArray(A, n);
+//	sort::printArray(A, n);
 //	sort::deleteArray(A);
 //	auto end = std::chrono::high_resolution_clock::now();
 //	std::cout<<" Elapsed : " << getElapsedTime(start, end) << std::endl;
-//	return 0;
-//}
+	return 0;
+}

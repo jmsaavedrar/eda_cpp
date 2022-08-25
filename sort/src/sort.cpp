@@ -51,7 +51,7 @@ namespace sort{
 	void quickSort(float* A, int i, int j){
 		if (i < j){
 			int k = split_qs(A, i, j);
-			quickSort(A, i, k);
+			quickSort(A, i, k-1);
 			quickSort(A, k + 1, j);
 		}
 	}
@@ -59,6 +59,26 @@ namespace sort{
 	void quickSort(float* A, int n){
 		quickSort(A, 0, n - 1);
 	}
+
+	int  k_smallest(float* A, int i, int j, int k){
+		int p = split_qs(A, i, j);
+		int val = 0;
+		if (k == p){
+			val = A[p];
+		}
+		else if (k < p){
+			val = k_smallest(A, i, p-1, k);
+		}
+		else{
+			val = k_smallest(A, p+1, j, k);
+		}
+		return val;
+	}
+
+	int  k_smallest(float* A, int n, int k){
+		return k_smallest(A, 0, n-1, k);
+	}
+
 }
 
 
