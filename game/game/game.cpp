@@ -18,8 +18,6 @@ bool pathExists(bool** lab, int size, adts::Cell2D start, adts::Cell2D end){
 		adts::Node* node = stack.top();
 		row = node->getData().getRow();
 		col = node->getData().getCol();
-		node->print();
-		std::cout<<std::endl;
 		visit[row][col] = true;
 		if (end.getRow() == row && end.getCol() == col){
 			ans = true;
@@ -74,7 +72,7 @@ int main(int nargas, char** vargs){
 	game::copyData(lab, size, data);
 
 	adts::Cell2D start(1,2);
-	adts::Cell2D end(0,0);
+	adts::Cell2D end(5,4);
 	bool ans = pathExists(lab, size, start, end);
 	if (ans){
 		std::cout<<"Existe Ruta" <<std::endl;
