@@ -1,0 +1,3 @@
+/home/jsaavedr/Research/git/courses/eda_cpp_full/game/build/CMakeFiles/rebuild_cache.dir
+/home/jsaavedr/Research/git/courses/eda_cpp_full/game/build/CMakeFiles/edit_cache.dir
+/home/jsaavedr/Research/git/courses/eda_cpp_full/game/build/CMakeFiles/game.dir
