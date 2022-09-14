@@ -88,7 +88,7 @@ int main(int nargas, char** vargs){
 	game::copyData(lab, size, data);
 
 	adts::Cell2D start(1,2);
-	adts::Cell2D end(7,3);
+	adts::Cell2D end(5,4);
 	adts::CellLinkedList path;
 	bool ans = pathExists(lab, size, start, end, path);
 	if (ans){

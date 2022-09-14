@@ -6,6 +6,7 @@
  */
 
 #include "lLists/stack.hpp"
+//#include <iostream>
 
 namespace eda {
 
@@ -52,6 +53,7 @@ void Stack::clear(){
 }
 
 Stack::~Stack() {
+	//std::cout<<"destructor Stack"<<std::endl;
 	clear();
 }
 
