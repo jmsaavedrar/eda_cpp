@@ -17,7 +17,6 @@ private:
 	Node* head;
 public:
 	Stack();
-	void push(char val);
 	void push(Node* node);
 	void pop();
 	Node* top();

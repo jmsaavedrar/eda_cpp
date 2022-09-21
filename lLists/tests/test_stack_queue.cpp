@@ -10,10 +10,10 @@ int main(int nargs, char** vargs){
 	stack.push(20);
 	stack.push(30);
 
-	while(!stack.isEmpty()){
-		std::cout << stack.top()->getData() << std::endl;
-		stack.pop();
-	}
+//	while(!stack->isEmpty()){
+//		std::cout<<stack->top()->getData()<<" "<<std::endl;
+//		stack->pop();
+//	}
 
 	return 0;
 }

@@ -8,7 +8,7 @@
 namespace eda {
 
 
-Node::Node(): data(-1), ptrNext(nullptr) {
+Node::Node(): data('\0'), ptrNext(nullptr) {
 }
 
 Node::Node(char val, Node* next): data(val), ptrNext(next) {

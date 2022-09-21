@@ -27,7 +27,7 @@ bool validateParenthesis(const std::string &input, int* pos){
 	if (!stack.isEmpty()){
 		error = true;
 	}
-	*pos = i;
+	*pos = i - 1 ;
 	return !error;
 }
 
@@ -43,7 +43,7 @@ int main(int nargs, char** vargs){
 	}
 	else{
 		std::cout<< " Expresión Inválida" << std::endl;
-		std::cout<< "Pos error:  " << pos - 1	<< std::endl;
+		std::cout<< "Pos error:  " << pos	<< std::endl;
 	}
 
 	return 0;

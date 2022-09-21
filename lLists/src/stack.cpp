@@ -6,7 +6,7 @@
  */
 
 #include "lLists/stack.hpp"
-//#include <iostream>
+#include <iostream>
 
 namespace eda {
 
@@ -21,13 +21,8 @@ void Stack::push(int val){
 }
 
 void Stack::push(Node* node){
-	if (head == nullptr){
-		head = node;
-	}
-	else{
-		node->setNext(head);
-		head = node;
-	}
+	node->setNext(head);
+	head = node;
 }
 
 void Stack::pop(){
@@ -53,7 +48,7 @@ void Stack::clear(){
 }
 
 Stack::~Stack() {
-	//std::cout<<"destructor Stack"<<std::endl;
+	std::cout<<"destructor Stack"<<std::endl;
 	clear();
 }
 

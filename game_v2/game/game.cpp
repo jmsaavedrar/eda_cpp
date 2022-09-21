@@ -73,7 +73,7 @@ bool pathExists(bool** lab, int size, adts::Cell2D start, adts::Cell2D end, adts
 }
 
 int main(int nargas, char** vargs){
-	bool data[8][8] ={{1,1,0,0,1,0,1,1},
+	bool data[8][8] ={{1,1,1,0,1,0,1,1},
 					  {1,0,1,1,1,1,0,1},
 					  {0,0,1,1,1,1,0,1},
 					  {1,0,1,1,0,1,0,1},

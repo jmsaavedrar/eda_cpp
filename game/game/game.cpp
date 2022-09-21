@@ -57,7 +57,7 @@ bool pathExists(bool** lab, int size, adts::Cell2D start, adts::Cell2D end){
 }
 
 int main(int nargas, char** vargs){
-	bool data[8][8] ={{1,1,0,0,1,0,1,1},
+	bool data[8][8] ={{1,1,1,0,1,0,1,1},
 					  {1,0,1,1,1,1,0,1},
 					  {0,0,1,1,1,1,0,1},
 					  {1,0,1,1,0,1,0,1},
@@ -72,7 +72,7 @@ int main(int nargas, char** vargs){
 	game::copyData(lab, size, data);
 
 	adts::Cell2D start(1,2);
-	adts::Cell2D end(5,4);
+	adts::Cell2D end(0,0);
 	bool ans = pathExists(lab, size, start, end);
 	if (ans){
 		std::cout<<"Existe Ruta" <<std::endl;

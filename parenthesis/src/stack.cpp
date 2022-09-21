@@ -14,10 +14,6 @@ Stack::Stack():head(nullptr) {
 
 }
 
-void Stack::push(char val){
-	Node* node = new Node(val);
-	push(node);
-}
 
 void Stack::push(Node* node){
 	if (head == nullptr){
