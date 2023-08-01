@@ -12,6 +12,7 @@ int main(int nargs, char** vargs){
 //	}
 // MSS
 	int A[]={-2, 11, -1, 3, -3, -2};
+	//int A[]={-2, -1, -1, 3, -3, -2};
 	int i =0;
 	int j = 0;
 	int mss = 0;
