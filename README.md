@@ -9,6 +9,9 @@
 ## Dependencies
 - g++
 - cmake
+  
+To make environment setting easy, we have relesed a Linux virtual machine with the dependencies already installed. You can download the VM from [here](https://www.dropbox.com/scl/fi/suhnm0ci3pj0xo80a71gm/EDAUAndes.ova).
+
 
 Please, to install the dependencies consult the Chapter 1 of the guide [book](https://www.dropbox.com/s/v3jeokz580z0amq/EDA_book.pdf).
 ## Compiling with CMake 
