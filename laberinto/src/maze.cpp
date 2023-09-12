@@ -5,8 +5,8 @@
 
 namespace maze{
 
-const unsigned char Maze::WALL  = '=';
-const unsigned char Maze::EMPTY = ' ';
+const unsigned char Maze::WALL  = '@';
+const unsigned char Maze::EMPTY = '-';
 const int Maze::NORTH= 0;
 const int Maze::SOUTH= 1;
 const int Maze::EAST= 2;
@@ -71,8 +71,7 @@ void Maze::visit(int i, int j){
 	int j_next = 0;
 	grid[i][j] = 0;
 	shuffle_dir();
-	std::cout << dir[0] << " " << dir[1] << " " << dir[2] << " "<< dir[3] << std::endl;
-	std::cout << "ok" << std::endl;
+	//std::cout << dir[0] << " " << dir[1] << " " << dir[2] << " "<< dir[3] << std::endl;
 	for(int k = 0; k <  4; k++){
 		//std::cout << dir[k] << std::endl;
 		if (dir[k] == NORTH){
@@ -102,9 +101,11 @@ void Maze::visit(int i, int j){
 }
 
 void Maze::print(){
+	char LIMIT = '=';
+	std::cout << " Maze ( "<< height << " x " << width << " ) " << std::endl;
 	std::cout << " ";
 	for (int j = 0; j < width; j++){
-		std::cout << "-";
+		std::cout << LIMIT;
 	}
 	std::cout << " ";
 	std::cout << std::endl;
@@ -123,7 +124,7 @@ void Maze::print(){
 	}
 	std::cout << " ";
 	for (int j = 0; j < width; j++){
-		std::cout << "-";
+		std::cout << LIMIT;
 	}
 	std::cout << " ";
 	std::cout << std::endl;
