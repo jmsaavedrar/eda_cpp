@@ -14,7 +14,7 @@ To make environment setting easy, we have relesed a Linux virtual machine with t
 
 ## Installing VirtualBox
 If you want to work with the VBox environment please folow these steps:
-- Go to https://www.virtualbox.org/wiki/Download
+- Go to https://www.virtualbox.org/wiki/Downloads
 - Select the option [Windows Hosts]
 - Run the installer answering yes to all questions.
 - Use File/Import Applience to select the VM EDAUAndes downloaded previously.
