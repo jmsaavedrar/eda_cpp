@@ -22,6 +22,7 @@ namespace image {
 		void threshold(); 
     	int getValue(int row, int col);
 		void show();
+		//ListOfRegions getRegions()
         virtual ~Image(); 
 		static Image* readImage(std::string &path);        
 	};
