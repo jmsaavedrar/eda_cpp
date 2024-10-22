@@ -7,6 +7,7 @@ int* readKeysFromFile(std::string filename, int* n_keys){
     std::ifstream  fin(filename, std::ios::binary); 
     char* val = new char[4];
     int n = 0;
+    fin.read(val, 4);
     while (!fin.eof()){
         n = n + 1;        
         fin.read(val, 4);
@@ -26,7 +27,7 @@ int* readKeysFromFile(std::string filename, int* n_keys){
 
 int main(int nargs, char** vargs){
     int n_data = 0;
-    int* data = readKeysFromFile("keys.bin", &n_data);
+    int* data = readKeysFromFile("keys_sorted.bin", &n_data);
     trees::RB rbtree;
     for(int i=0; i<n_data;i++){
         std::cout<< "inserting " << data[i] << std::endl;
