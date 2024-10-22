@@ -7,7 +7,7 @@
 namespace image{
 
     Image::Image(): width(0), height(0), th_value(120), data(nullptr){
-
+    
     }
 
     Image::Image(int w, int h): width(w), height(h), th_value(120),  data(nullptr){
@@ -30,6 +30,9 @@ namespace image{
             }
         }
     }
+
+    
+
     int Image::getValue(int row, int col){
         int pos = row*width + col;
         return static_cast<int>(data[pos]);
@@ -56,6 +59,8 @@ namespace image{
     Image::~Image(){
 
     }
+
+    
 
     Image* Image::readImage(std::string &path){
 
@@ -98,6 +103,46 @@ namespace image{
         assert(im != nullptr);
         return im;
     }
+
+    // ListOfRegions* Image::getRegions(int label){
+    //     ListOfRegions* list = new ListOfRegions();
+    //     id = 09
+    //     for cada punto en la image 
+    //       if punto es no visitado
+    //           region = getRegion(punto, id +1 )
+    //           list->insert(region)
+    //           id = id + 1
+
+        
+    //     return list;
+    // }
+
+    // Region* Image::getRegion(punto=i,j, int label)){
+    //     Region r(label)
+    //     lista de punto  l
+    //     Point2D p(i,j)
+    //     stack s
+    //     s->insert(p(i,j))
+    //     while s->!empty{
+    //         punto i,j =s->top
+    //         s->pop
+    //         l->insert(punto(i,j))
+    //         vistado[i,j] = True
+
+    //         if s no visitado {
+    //             para cada vecino que no este visitado
+    //               s-insert(vecino)   
+    //         }
+    //     } 
+    //     r->setList(l)
+    //     r->setLabel(label)
+    //     return r
+
+    // }
+
+    
+    //}
+
 
 }
 
